@@ -65,7 +65,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp R &kp I &kp T &kp S &kp U &kp I &kp TAB  &kp P &kp O &kp KP_N8 &kp KP_N4 &kp U &kp R &kp 3 &kp U &kp RET>
+                = <&macro_tap &kp R &kp I &kp T &kp S &kp U &kp I &kp TAB  &kp P &kp O &kp KP_N8 &kp KP_N4 &kp U &kp R &kp KP_N3 &kp U &kp RET>
                 ;
         };
     };
@@ -189,7 +189,7 @@ label= "TVP 1"                             ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃   TVP2    ┃  CTRL     ┃     Z     ┃     X     ┃     C     ┃     V     ┃   ┃     [     ┃     ]     ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃ DELETE    ┃ UNDO/SAVE ┃  SEL/MOV  ┃   ┃   COPY    ┃ PASTE     ┃ UNDO      ┃
+//                                     ┃    TAB    ┃  DELETE   ┃   SPACE   ┃   ┃   COPY    ┃ PASTE     ┃ UNDO      ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -197,7 +197,7 @@ label= "TVP 1"                             ;
                 &kp ESC      &kp Q       &kp W       &kp E       &kp R           &kp H       &kp L       &none       &none       &none
                 &kp LSHFT    &kp A       &kp S       &kp D       &kp F           &kp -       &kp +       &none       &none       &none
     &lt TVP2 L  &kp LCTRL    &kp Z       &kp X       &kp C       &kp V           &kp LBKT    &kp RBKT    &none       &none       &none       &none        
-                                         &kp DEL     &kp LC(F14) &kp LC(F13)     &kp LC(C)   &kp LC(V)   &kp LC(Z)    
+                                         &kp TAB     &kp DEL     &kp SPACE       &kp LC(C)   &kp LC(V)   &kp LC(Z)    
                         >;
                 };
 
