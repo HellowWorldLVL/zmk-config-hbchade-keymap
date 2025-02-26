@@ -30,67 +30,56 @@
   tapping-term-ms = <170>;
 };
 
+
+
 / {
-    behaviors {
-         lgn: positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <400>;
-            quick-tap-ms = <200>;
-            bindings = <&usr>, <&pas>;
-            old-trigger-key-positions = <20> //2nd "Q"
-    };
-};
-
-/ {	combos {
+     combos {
             compatible = "zmk,combos";
-		combo_esc {
-                	timeout-ms = <50>;
-                	key-positions = <0 1>;
-                	bindings = <&kp ESC>;
-			};
-
-		combo_tvp {
-                	timeout-ms = <100>;
-                	key-positions = <11 12 13>;
-                	bindings = <&tog TVP1>;
-			};       
+            combo_esc {
+                timeout-ms = <50>;
+                key-positions = <0 1>;
+                bindings = <&kp ESC>;
+            };
+            combo_tvp {
+                timeout-ms = <100>;
+                key-positions = <11 12 13>;
+                bindings = <&tog TVP1>;
+            };
+           
     };
-};
 
-/{   macros {
-	gif: gif {
-		label = "giphy";
-		compatible = "zmk,behavior-macro";
-		#binding-cells = <0>;
-		bindings = 
-			<&macro_press &kp LSHFT>,
-			<&macro_tap &kp N2>,
-			<&macro_release &kp LSHFT>,
-			<&macro_tap &kp G &kp I &kp F>;
-		};
-
+    macros {
+        gif: gif {
+            label = "giphy";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp N2>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp G &kp I &kp F>
+                ;
+        };
        usr: usr {
             label = "USER";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp R &kp I &kp T &kp S &kp U &kp I &kp TAB >;
-        	};
-
+            bindings
+                = <&macro_tap &kp R &kp I &kp T &kp S &kp U &kp I &kp TAB >
+                ;
+        };
         pas: pas {
-            label = "PASSWORD";
+            label = "login";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp P &kp O &kp N8 &kp N4 &kp U &kp R &kp N3 &kp U &kp RET >;
-        	};
+            bindings
+                = <&macro_tap  &kp P &kp O &kp N8 &kp N4 &kp U &kp R &kp N3 &kp U &kp RET>
+                ;
+        };
     };
 
-};
-
-
-
-        keymap {compatible = "zmk,keymap";
+        keymap {
+                compatible = "zmk,keymap";
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
                 base_layer {
@@ -104,14 +93,14 @@ label= "BASE"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃     log   ┃     Z     ┃     X     ┃     C     ┃     V     ┃     B     ┃   ┃     K     ┃     M     ┃     ,     ┃     .     ┃     /     ┃     \     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃    DEL    ┃    TAB    ┃    SPC    ┃   ┃   ENTER   ┃           ┃   BSPC    ┃
+//                                     ┃    DEL    ┃    TAB    ┃    SPC    ┃   ┃   ENTER   ┃    ESC    ┃   BSPC    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp Q       &kp W       &kp F       &kp P       &kp G           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
                 &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp D           &kp H       &mt RSHFT N &mt RCTRL E &mt RALT I  &mt RGUI O
-        &lgn    &kp Z       &kp X       &kp C       &kp V       &kp B           &kp K       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
+         &pas   &kp Z       &kp X       &kp C       &kp V       &kp B           &kp K       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
                                         &kp DEL   &lt NAV TAB   &kp SPACE       &kp RET   &lt SYM ESC   &kp BSPC
                         >;
                 };
@@ -216,7 +205,7 @@ label= "TVP 1"                             ;
 
                 &kp ESC      &kp Q       &kp W       &kp E       &kp R           &kp H       &kp L       &none       &none       &none
                 &kp LSHFT    &kp A       &kp S       &kp D       &kp F          &kp KP_MINUS  &kp KP_PLUS &none      &none       &none
-    &lt TVP2 L  &kp LCTRL    &kp Z       &kp X       &kp C       &kp V           &kp LBKT    &kp RBKT    &none       &none       &none       &none        
+    &lt TVP2 L  &kp LCTRL    &kp Z       &kp X       &kp C       &kp V           &kp LBKT    &kp RBKT    &none       &none       &usr        &pas      
                                          &kp TAB     &kp DEL     &kp SPACE       &kp LC(C)   &kp LC(V)   &kp LC(Z)    
                         >;
                 };
