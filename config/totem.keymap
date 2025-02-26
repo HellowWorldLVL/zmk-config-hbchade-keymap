@@ -31,56 +31,55 @@
 };
 
 
-/ {	combos {
-            compatible = "zmk,combos";
-            combo_esc {
-                timeout-ms = <50>;
-                key-positions = <0 1>;
-                bindings = <&kp ESC>;
-		};
-	combo_tvp {
-                timeout-ms = <100>;
-                key-positions = <11 12 13>;
-                bindings = <&tog TVP1>;
-		};
-	combo_pas {
-                timeout-ms = <100>;
-                key-positions = <21 22>;
-                bindings = <&pas>;
-		};
-           
-    };
 
  /{   macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp N2>
-                , <&macro_release &kp LSHFT>
-                , <&macro_tap &kp G &kp I &kp F>;
+	gif: gif {
+		label = "giphy";
+		compatible = "zmk,behavior-macro";
+		#binding-cells = <0>;
+		bindings = 
+			<&macro_press &kp LSHFT>,
+			<&macro_tap &kp N2>,
+			<&macro_release &kp LSHFT>,
+			<&macro_tap &kp G &kp I &kp F>;
 		};
 
        usr: usr {
             label = "USER";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp R &kp I &kp T &kp S &kp U &kp I &kp TAB >;
+            bindings = <&macro_tap &kp R &kp I &kp T &kp S &kp U &kp I &kp TAB >;
         	};
 
         pas: pas {
             label = "login";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap  &kp P &kp O &kp N8 &kp N4 &kp U &kp R &kp N3 &kp U &kp RET>;
+            bindings = <&macro_tap  &kp P &kp O &kp N8 &kp N4 &kp U &kp R &kp N3 &kp U &kp RET>;
         	};
     };
 
 
+/ {	combos {
+            compatible = "zmk,combos";
+		combo_esc {
+                	timeout-ms = <50>;
+                	key-positions = <0 1>;
+                	bindings = <&kp ESC>;
+			};
+
+		combo_tvp {
+                	timeout-ms = <100>;
+                	key-positions = <11 12 13>;
+                	bindings = <&tog TVP1>;
+			};
+		combo_pas {
+                	timeout-ms = <100>;
+                	key-positions = <21 22>;
+                	bindings = <&pas>;
+			};
+           
+    };
 
 
 
