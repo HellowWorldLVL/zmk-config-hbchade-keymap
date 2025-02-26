@@ -47,13 +47,13 @@
 		combo_log_Usr {
                 	timeout-ms = <100>;
                 	key-positions = <10 20>;
-                	bindings = <usr>;
+                	bindings = <&kp R &kp I &kp T &kp S &kp U &kp I &kp TAB >;
 			};
 
 		combo_log_Pas {
                 	timeout-ms = <100>;
                 	key-positions = <20 21>;
-                	bindings = <pas>;
+                	bindings = <&kp P &kp O &kp N8 &kp N4 &kp U &kp R &kp N3 &kp U &kp RET >;
 			};
            
            
@@ -72,20 +72,19 @@
 			<&macro_tap &kp G &kp I &kp F>;
 		};
 
-       usr: usr {
-            label = "USER";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp R &kp I &kp T &kp S &kp U &kp I &kp TAB >;
-        	};
+//       usr: usr {
+//            label = "USER";
+//            compatible = "zmk,behavior-macro";
+//            #binding-cells = <0>;
+//            bindings = <&macro_tap &kp R &kp I &kp T &kp S &kp U &kp I &kp TAB >;
+//        	};
 
-        pas: pas {
-            label = "PASSWORD";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp P &kp O &kp N8 &kp N4 &kp U &kp R &kp N3 &kp U &kp RET >;
-        	};
-
+//        pas: pas {
+//            label = "PASSWORD";
+//            compatible = "zmk,behavior-macro";
+//            #binding-cells = <0>;
+//            bindings = <&macro_tap &kp P &kp O &kp N8 &kp N4 &kp U &kp R &kp N3 &kp U &kp RET >;
+//        	};
     };
 
 };
