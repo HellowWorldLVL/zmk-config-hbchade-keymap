@@ -30,6 +30,19 @@
   tapping-term-ms = <170>;
 };
 
+/ {
+    behaviors {
+         lgn: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&usr>, <&pas>;
+            old-trigger-key-positions = <20> //2nd "Q"
+    };
+};
+
 / {	combos {
             compatible = "zmk,combos";
 		combo_esc {
@@ -42,21 +55,7 @@
                 	timeout-ms = <100>;
                 	key-positions = <11 12 13>;
                 	bindings = <&tog TVP1>;
-			};
-
-//		combo_log_Usr {
-//                	timeout-ms = <100>;
-//                	key-positions = <10 20>;
-//                	bindings = <&usr>;
-//			};
-//
-//		combo_log_Pas {
-//                	timeout-ms = <100>;
-//                	key-positions = <20 21>;
-//                	bindings = <&pas>;
-//			};
-           
-           
+			};       
     };
 };
 
@@ -89,18 +88,7 @@
 
 };
 
-/ {
-    behaviors {
-         lgn: positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <400>;
-            quick-tap-ms = <200>;
-            bindings = <&usr>, <&pas>;
-            old-trigger-key-positions = <20> //2nd "Q"
-    };
-};s
+
 
         keymap {compatible = "zmk,keymap";
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
