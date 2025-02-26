@@ -46,14 +46,14 @@
 
 		combo_log_Usr {
                 	timeout-ms = <100>;
-                	key-positions = <20 10>;
-                	bindings = <&usr>;
+                	key-positions = <10 20>;
+                	bindings = <usr>;
 			};
 
 		combo_log_Pas {
                 	timeout-ms = <100>;
                 	key-positions = <20 21>;
-                	bindings = <&pas>;
+                	bindings = <pas>;
 			};
            
            
