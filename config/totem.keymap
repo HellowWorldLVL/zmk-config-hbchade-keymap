@@ -43,19 +43,22 @@
                 	key-positions = <11 12 13>;
                 	bindings = <&tog TVP1>;
 			};
-		combo_log_UseName {
+
+		combo_log_Usr {
                 	timeout-ms = <100>;
-                	key-positions = <20 21>;
+                	key-positions = <20 10>;
                 	bindings = <&usr>;
 			};
-		combo_log_PassWord {
+
+		combo_log_Pas {
                 	timeout-ms = <100>;
-                	key-positions = <20 22>;
+                	key-positions = <20 21>;
                 	bindings = <&pas>;
 			};
            
            
     };
+};
 
  /{   macros {
 	gif: gif {
@@ -85,7 +88,7 @@
 
     };
 
-
+};
 
         keymap {compatible = "zmk,keymap";
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
