@@ -20,7 +20,7 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
-#define EXCL 4
+#define TVP1 4
 #define TVP2 5
 
 &mt {
@@ -91,7 +91,7 @@ label= "BASE"                              ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃     A     ┃     R     ┃     S     ┃     T     ┃     D     ┃   ┃     H     ┃     N     ┃     E     ┃     I     ┃     O     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃LC(LSHFT)   ┃     Z     ┃     X     ┃     C     ┃     V     ┃     B     ┃   ┃     K     ┃     M     ┃     ,     ┃     .     ┃     /     ┃     \     ┃
+// ┃     EXCL   ┃     Z     ┃     X     ┃     C     ┃     V     ┃     B     ┃   ┃     K     ┃     M     ┃     ,     ┃     .     ┃     /     ┃     \     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    DEL    ┃    TAB    ┃    SPC    ┃   ┃   ENTER   ┃    ESC    ┃   BSPC    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -100,7 +100,7 @@ label= "BASE"                              ;
 
                 &kp Q       &kp W       &kp F       &kp P        &kp G           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
                 &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T  &kp D           &kp H       &mt RSHFT N &mt RCTRL E &mt RALT I  &mt RGUI O
-    &tog EXCL   &kp Z       &kp X       &kp C       &kp V        &kp B           &kp K       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
+    &tog tvp1   &kp Z       &kp X       &kp C       &kp V        &kp B           &kp K       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
                                         &kp DEL   &lt NAV TAB    &kp SPACE       &kp RET   &lt SYM ESC   &kp BSPC
                         >;
                 };
@@ -186,26 +186,25 @@ label= "ADJ"                               ;
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                excl_layer {
+                tvp1_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-label= "EXCL"                             ;
+label= "Tvp1"                             ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-//               ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//              ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //          ┃        ESC        PRTSRN    ┃   P UP ┃         =       ┃   SPACE     ┃   ┃     =    ┃     H     ┃     UP          I     ┃     CLOSE     ┃
-//               ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//              ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //                  DEL     ┃   HOME    ┃     P DOWN     ┃   END      ┃  TAB     ┃          (    ┃     LEFT       DOWN        RIGHT ┃     -     ┃
-//   ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃       CTRL     SHIFT    ┃   SHIFT        C LOCK       ┃ P DOWN     ENTER     ┃        )   ┃      +     ┃     -     ┃      *     ┃      /     ┃      ^     ┃
+//  ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃       CTRL     SHIFT    ┃   WIN          SEL_ALL      ┃ P DOWN     ENTER     ┃        )   ┃      +     ┃     -     ┃      *     ┃      /     ┃      ^     ┃
 //  ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                    ┃        CUT    ┃     COPY       PASTE  ┃   ┃        REDO ┃     UNDO    ┃  SAVE      ┃
+//                                    ┃      CUT    ┃     COPY       PASTE  ┃   ┃        REDO ┃     UNDO    ┃  SAVE      ┃
 //                                       ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp ESC      &kp PSCRN   &kp PG_UP   &kp EQUAL   &kp TAB         &kp EQUAL    &kp H        &kp UP          &kp I             &kp LA(F4)
+                &kp ESC      &kp PSCRN   &kp PG_UP   &kp EQUAL   &kp SPACE       &kp EQUAL    &kp H        &kp UP          &kp I             &kp LA(F4)
                 &kp DEL      &kp HOME    &kp PG_DN   &kp END     &kp RET         &kp LPAR     &kp LEFT     &kp DOWN        &kp RIGHT         &kp KP_MINUS
-     &kp LCTRL  &kp LSHFT    &kp LSHFT   &kp CAPS    &kp PG_DN   &kp SPACE       &kp RPAR     &kp KP_PLUS  &kp KP_MINUS    &kp KP_MULTIPLY   &kp BSLH      &kp CARET
+     &kp LCTRL  &kp LSHFT    &kp LGUI    &kp LC(A)   &kp PG_DN   &kp TAB         &kp RPAR     &kp KP_PLUS  &kp KP_MINUS    &kp KP_MULTIPLY   &kp BSLH      &kp CARET
                                          &kp LC(X)   &kp LC(C)   &kp LC(V)       &kp LC(Y)    &kp LC(Z)    &kp LC(S)      
                         >;
                 };
