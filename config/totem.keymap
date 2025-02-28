@@ -221,7 +221,7 @@ label= "tvp 2"                             ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃ ---       ┃ LAST KEY  ┃ NEW KEY   ┃ NEXT KEY  ┃    ENTER     ┃   ┃       EMPTY        ┃  F4        ┃  F5        ┃  F6 ┃        ┃ F11    ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃ OUT TOG  ┃ FULLSCR   ┃ CPY2BRUSH ┃ DEL HEAD  ┃ PSTinPLACE    ┃ BOOK MARK ┃   ┃        EMPTY        ┃  F1        ┃  F2        ┃  F3        ┃  F10         ┃PASSWORD           ┃
+// ┃ BASE  ┃ FULLSCR   ┃ CPY2BRUSH ┃ DEL HEAD  ┃ PSTinPLACE    ┃ BOOK MARK ┃   ┃        EMPTY        ┃  F1        ┃  F2        ┃  F3        ┃  F10         ┃PASSWORD           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃          ┃ REDO/SAV1   ┃TRANS/WARP ┃   ┃       usr        ┃  UNDO       ┃  SAVE      ┃
 //                                      ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -230,7 +230,7 @@ label= "tvp 2"                             ;
 
                   &kp LC(F18) &kp LS(I)    &kp LS(HOME) &kp LS(O)     &kp LS(F)       &trans      &kp F7      &kp F8      &kp F9      &kp F12
                   &trans      &kp LS(LEFT) &kp LC(F17)  &kp LS(RIGHT) &kp RET         &trans      &kp F4      &kp F5      &kp F6      &kp F11  
-  &out OUT_TOG    &kp J       &kp LS(C)    &kp LC(F16)  &kp LS(V)     &kp LC(F15)     &trans      &kp F1      &kp F2      &kp F3      &kp F10       &trans         
+  &to BASE    &kp J       &kp LS(C)    &kp LC(F16)  &kp LS(V)     &kp LC(F15)     &trans      &kp F1      &kp F2      &kp F3      &kp F10       &trans         
                                            &trans       &kp LC(F12)   &kp LC(F11)     &usr      &pas      &trans      
                         >;
                 };
